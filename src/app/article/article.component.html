@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <div>{{article.votes}}</div>
+        <div>Points</div>
+    </div>
+</div>
+<div>
+    <a href="{{article.link}}">{{article.title}}</a>
+    <button (click)="voteUp()">VoteUp</button>
+    <button (click)="voteDown()">VoteDown</button>
+        
+    <button (click)="deleteArticle(article)">Delete</button>
+</div>
+
+

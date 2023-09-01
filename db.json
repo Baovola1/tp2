@@ -1,0 +1,77 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "test",
+      "link": "http://google.com"
+    },
+    {
+      "id": 2,
+      "title": "test2",
+      "link": "http://google.com"
+    },
+    {
+      "title": "angular",
+      "link": "http://angular.io",
+      "id": 3
+    },
+    {
+      "title": "fullStack",
+      "link": "http://www.google.com",
+      "id": 4
+    },
+    {
+      "title": "test4",
+      "link": "http://www.google.com",
+      "votes": 7,
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "title": "essaie",
+      "link": "http://google.com",
+      "votes": 10,
+      "id": 11
+    },
+    {
+      "title": "testDelete",
+      "link": "http://google.com",
+      "votes": 5,
+      "id": 12
+    },
+    {
+      "title": "testDelete2",
+      "link": "http://google.com",
+      "votes": 10,
+      "id": 13
+    },
+    {
+      "id": 14,
+      "title": "aaaa",
+      "link": "bbb",
+      "votes": 0
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
