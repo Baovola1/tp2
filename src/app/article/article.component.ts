@@ -1,5 +1,6 @@
 import { Component,OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Article } from '../article';
+import { HttpserviceService } from '../httpservice.service';
 
 @Component({
   selector: 'app-article',
@@ -10,6 +11,7 @@ export class ArticleComponent implements OnInit {
 
   @Input()
   article!: Article;
+  updateMode = false;
   
   //partie pour le delete
   @Output()
@@ -19,11 +21,27 @@ export class ArticleComponent implements OnInit {
     this.articleToDelete.emit(article.id);
   }
 
-  constructor(){
-    // this.article = new Article(
-    //   'Angular 2',
-    //   'http://angular.io',
-    //   10);
+  //partie update
+  @Output()
+  selectedArticle = new EventEmitter<number>();
+
+  constructor(private httpService:HttpserviceService){
+   
+  }
+  
+  beginUpdate(){
+    this.updateMode = true;
+  }
+
+  //partie update
+  saveArticle(){
+    this.httpService.updateArticle(this.article).subscribe(()=>{
+      this.updateMode=false;
+    }) 
+  }
+
+  cancelArticle(){
+    this.updateMode = false;
   }
 
   voteUp():boolean{

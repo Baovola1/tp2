@@ -10,6 +10,16 @@
     <button (click)="voteDown()">VoteDown</button>
         
     <button (click)="deleteArticle(article)">Delete</button>
+    <button (click)="beginUpdate()">Update</button>
 </div>
-
+<form>
+    <ng-container *ngIf = updateMode  >
+    <label for="title">Title:</label>
+    <input type="text" [(ngModel)]="article.title" name="title">
+    <label for="link">Link:</label>
+    <input type="text" [(ngModel)]="article.link" name="link">
+    <button (click)="saveArticle()">Save</button>
+    <button (click)="cancelArticle()">Cancel</button>
+</ng-container>
+</form>
 
